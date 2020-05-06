@@ -63,6 +63,19 @@ public class Deque<Item> implements Iterable<Item> {
 
     }
 
+    //need validation
+    private void validateList(){
+        if (isEmpty()){
+            throw new NoSuchElementException("Can't remove, list is empty");
+        }
+    }
+
+    private void validateItem(Item item){
+        if (item == null){
+            throw new NullPointerException("Can't add null pointer");
+        }
+    }
+
     public static void main(String[] args){
         
     }
